@@ -1,0 +1,95 @@
+﻿<Window x:Class="DataGrid.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGrid" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" 
+        Background="Transparent" 
+        Title="LoginWindow" 
+        Height="500" 
+        Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1.5*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Source="/Images/close.png" Grid.Column="1" MouseDown="Image_MouseDown" Panel.ZIndex="1" Style="{StaticResource imgClose}"/>
+
+        <Border CornerRadius="10 0 0 10">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#3AA9AD" Offset="0" />
+                    <GradientStop Color="#3AADA1" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <Canvas>
+                    <Polygon Points="0,20 230,140 0,270" Fill="#4EB1B6" />
+                    <Polygon Points="100,400 200,370 180,470" Fill="#4EB1B6" />
+                    <Ellipse Margin="250 450 0 0" Width="40" Height="40" Fill="#4EB1B6" />
+                    <Ellipse Margin="50 400 0 0" Width="20" Height="20" Fill="#4EB1B6" />
+                </Canvas>
+
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Sign Up" Style="{StaticResource TitleText}" />
+                    <TextBlock Text="Enter your personal info to create an account if you are new" Opacity="0.8" Margin="20 30 20 30" Style="{StaticResource NormalText}" />
+                    <Button Content="Sign Up" Style="{StaticResource button}" Click="signUpButton_Click" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Background="#FFFFFF" Grid.Column="1" CornerRadius="0 10 10 0" MouseDown="Border_MouseDown">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="MYSHOP for ADMIN" Foreground="#3AB19B" Style="{StaticResource TitleText}" />
+                <StackPanel Orientation="Horizontal" Margin="0 20" HorizontalAlignment="Center">
+                    <Button Style="{StaticResource buttonCircle}">
+                        <Icon:PackIconMaterial Kind="LanguageCsharp" Width="25" Height="25"/>
+                    </Button>
+                    <Button Style="{StaticResource buttonCircle}">
+                        <Icon:PackIconMaterial Kind="LanguageXaml" Width="25" Height="25"/>
+                    </Button>
+                    <Button Style="{StaticResource buttonCircle}">
+                        <Icon:PackIconMaterial Kind="MicrosoftVisualStudio" Width="25" Height="25"/>
+                    </Button>
+                </StackPanel>
+
+                <TextBlock Text="Sign in by email&#x0a;or use your username info :" Margin="0 10 0 15" Foreground="#878787" Style="{StaticResource NormalText}" />
+
+                <Border BorderBrush="#ACB0AF" BorderThickness="1" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Icon:PackIconMaterial Kind="Email" Width="20" Height="20" VerticalAlignment="Center" />
+                        <TextBlock x:Name="textEmail" MouseDown="textEmail_MouseDown" Text="Email (or Username)" Style="{StaticResource textHint}" />
+                        <TextBox Name="txtEmail" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}" />
+                    </Grid>
+                </Border>
+
+                <Border BorderBrush="#ACB0AF" BorderThickness="1" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Icon:PackIconMaterial Kind="Lock" Width="20" Height="20" VerticalAlignment="Center" />
+                        <TextBlock x:Name="textPassword" MouseDown="textPassword_MouseDown" Text="Password" Style="{StaticResource textHint}" />
+                        <PasswordBox x:Name="passwordBox" PasswordChanged="PasswordBox_PasswordChanged" Style="{StaticResource textBox}" />
+                    </Grid>
+                </Border>
+
+                <Button Content="Sign In" Click="Button_Click" Style="{StaticResource mainButton}" />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

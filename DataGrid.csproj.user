@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AddOrder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DeleteConfirmation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditOrder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExitConfirmation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddOrder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DeleteConfirmation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditOrder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExitConfirmation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
